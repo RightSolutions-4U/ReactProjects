@@ -39,7 +39,7 @@ export default function App(props) {
 
   const squareElements = squares.map(square => (
       // <div style={styles} className="box" key={square.id}></div>
-      <Box on={square.on} key={square.id} id={square.id} handleClick={toggle}/>
+      <Box on={square.on} key={square.id} handleClick={() => toggle(square.id)}/>
     )
   )
   
